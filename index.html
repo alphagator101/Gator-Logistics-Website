@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>AlphaGator Logistics — Freight Brokerage, Frederick MD</title>
-<meta name="description" content="AlphaGator Logistics is a licensed freight brokerage based in Frederick, Maryland. Reliable FTL, LTL, and expedited freight across the United States." />
+<title>AlphaGator Logistics — Freight Brokerage, Odenton MD</title>
+<meta name="description" content="Licensed freight brokerage in Odenton, MD. Reliable FTL, LTL & expedited truckload shipping nationwide. Request a quote in 1 business day." />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,9 +28,7 @@
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-
 html { scroll-behavior: smooth; }
-
 body {
   font-family: var(--sans);
   color: var(--ink);
@@ -39,7 +37,6 @@ body {
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
-
 a { color: inherit; text-decoration: none; }
 button { font-family: inherit; cursor: pointer; border: none; background: none; }
 img { max-width: 100%; display: block; }
@@ -97,56 +94,17 @@ header.nav {
 .nav-inner {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 18px 32px;
+  padding: 14px 32px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 32px;
 }
-.logo-slot {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-.logo-mark {
-  width: 44px; height: 44px;
-  background: var(--royal);
-  color: var(--yellow);
-  display: grid;
-  place-items: center;
-  font-family: var(--display);
-  font-weight: 800;
-  font-size: 22px;
-  border-radius: 4px;
-  /* Replace this whole .logo-mark element with your <img> when uploading the logo */
-}
-.logo-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1;
-}
-.logo-text .name {
-  font-family: var(--display);
-  font-weight: 700;
-  font-size: 20px;
-  letter-spacing: -0.02em;
-  color: var(--royal-ink);
-}
-.logo-text .tag {
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--royal);
-  margin-top: 4px;
-}
+.logo-slot { display: flex; align-items: center; transition: opacity 0.2s; }
+.logo-slot:hover { opacity: 0.85; }
+.logo-img { height: 64px; width: auto; display: block; }
 
-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 36px;
-  align-items: center;
-}
+nav ul { display: flex; list-style: none; gap: 36px; align-items: center; }
 nav a {
   font-size: 14px;
   font-weight: 500;
@@ -176,6 +134,7 @@ nav a:hover::after { width: 100%; }
   transition: transform 0.2s, background 0.2s;
 }
 .nav-cta:hover { background: var(--royal-deep); transform: translateY(-1px); }
+.nav-cta::after { display: none; }
 
 .menu-toggle { display: none; }
 
@@ -184,22 +143,18 @@ nav a:hover::after { width: 100%; }
   position: relative;
   padding: 88px 32px 120px;
   overflow: hidden;
-  background:
-    radial-gradient(ellipse at 85% 20%, rgba(255, 214, 10, 0.18), transparent 55%),
-    radial-gradient(ellipse at 0% 90%, rgba(26, 58, 168, 0.08), transparent 50%),
-    var(--paper);
+  color: var(--paper);
+  isolation: isolate;
 }
-.hero::before {
-  content: "";
+.hero-bg { position: absolute; inset: 0; z-index: -2; }
+.hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.hero-overlay {
   position: absolute;
   inset: 0;
-  background-image:
-    linear-gradient(var(--line) 1px, transparent 1px),
-    linear-gradient(90deg, var(--line) 1px, transparent 1px);
-  background-size: 80px 80px;
-  opacity: 0.35;
-  mask-image: linear-gradient(180deg, transparent, black 30%, black 70%, transparent);
-  pointer-events: none;
+  z-index: -1;
+  background:
+    linear-gradient(105deg, rgba(8, 18, 74, 0.92) 0%, rgba(8, 18, 74, 0.78) 45%, rgba(8, 18, 74, 0.35) 100%),
+    radial-gradient(ellipse at 85% 20%, rgba(255, 214, 10, 0.15), transparent 55%);
 }
 .hero-inner {
   max-width: 1400px;
@@ -219,51 +174,27 @@ nav a:hover::after { width: 100%; }
   font-size: 11px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--royal);
+  color: var(--yellow);
   margin-bottom: 28px;
 }
-.eyebrow::before {
-  content: "";
-  width: 32px; height: 1px;
-  background: var(--royal);
-}
+.eyebrow::before { content: ""; width: 32px; height: 1px; background: var(--yellow); }
 .hero h1 {
   font-family: var(--display);
   font-weight: 400;
   font-size: clamp(48px, 7vw, 104px);
   line-height: 0.95;
   letter-spacing: -0.035em;
-  color: var(--royal-ink);
+  color: var(--paper);
 }
-.hero h1 .accent {
-  font-style: italic;
-  font-weight: 400;
-  color: var(--royal);
-  position: relative;
-}
-.hero h1 .accent::after {
-  content: "";
-  position: absolute;
-  left: -4px; right: -4px;
-  bottom: 8%;
-  height: 22%;
-  background: var(--yellow);
-  z-index: -1;
-  transform: skewX(-6deg);
-}
+.hero h1 .accent { font-style: italic; font-weight: 400; color: var(--yellow); position: relative; }
 .hero p.lede {
   margin-top: 32px;
   font-size: 19px;
   line-height: 1.55;
-  color: rgba(10, 12, 28, 0.72);
+  color: rgba(244, 239, 228, 0.88);
   max-width: 540px;
 }
-.hero-actions {
-  margin-top: 40px;
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-}
+.hero-actions { margin-top: 40px; display: flex; gap: 16px; flex-wrap: wrap; }
 .btn-primary, .btn-ghost {
   padding: 16px 28px;
   font-size: 14px;
@@ -275,27 +206,21 @@ nav a:hover::after { width: 100%; }
   gap: 10px;
   transition: all 0.2s ease;
 }
-.btn-primary {
-  background: var(--royal-ink);
-  color: var(--yellow);
-}
+.btn-primary { background: var(--yellow); color: var(--royal-ink); }
 .btn-primary:hover {
-  background: var(--royal);
+  background: var(--paper);
   transform: translateY(-2px);
-  box-shadow: 0 12px 28px -8px rgba(15, 34, 112, 0.5);
+  box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.5);
 }
 .btn-primary svg { transition: transform 0.2s; }
 .btn-primary:hover svg { transform: translateX(4px); }
-.btn-ghost {
-  background: transparent;
-  color: var(--royal-ink);
-  border: 1.5px solid var(--royal-ink);
-}
-.btn-ghost:hover { background: var(--royal-ink); color: var(--paper); }
+.btn-ghost { background: transparent; color: var(--paper); border: 1.5px solid rgba(244, 239, 228, 0.6); }
+.btn-ghost:hover { background: var(--paper); color: var(--royal-ink); border-color: var(--paper); }
 
-/* Hero side card */
 .hero-card {
-  background: var(--royal-ink);
+  background: rgba(8, 18, 74, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 214, 10, 0.25);
   color: var(--paper);
   border-radius: 4px;
   padding: 36px;
@@ -345,19 +270,8 @@ nav a:hover::after { width: 100%; }
   padding-top: 24px;
   border-top: 1px solid rgba(244, 239, 228, 0.18);
 }
-.stat .num {
-  font-family: var(--display);
-  font-size: 40px;
-  font-weight: 600;
-  color: var(--yellow);
-  line-height: 1;
-}
-.stat .desc {
-  font-size: 12px;
-  margin-top: 8px;
-  opacity: 0.7;
-  line-height: 1.4;
-}
+.stat .num { font-family: var(--display); font-size: 40px; font-weight: 600; color: var(--yellow); line-height: 1; }
+.stat .desc { font-size: 12px; margin-top: 8px; opacity: 0.7; line-height: 1.4; }
 
 /* Marquee */
 .marquee {
@@ -379,20 +293,12 @@ nav a:hover::after { width: 100%; }
   font-weight: 400;
 }
 .marquee-track span { display: inline-flex; align-items: center; gap: 64px; }
-.marquee-track .dot {
-  width: 8px; height: 8px;
-  background: var(--yellow);
-  border-radius: 50%;
-  display: inline-block;
-}
-@keyframes scroll {
-  to { transform: translateX(-50%); }
-}
+.marquee-track .dot { width: 8px; height: 8px; background: var(--yellow); border-radius: 50%; display: inline-block; }
+@keyframes scroll { to { transform: translateX(-50%); } }
 
 /* ------- Section base ------- */
 section { padding: 120px 32px; position: relative; }
 .container { max-width: 1400px; margin: 0 auto; }
-
 .section-head {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -409,65 +315,76 @@ section { padding: 120px 32px; position: relative; }
   color: var(--royal-ink);
 }
 .section-head h2 em { font-style: italic; color: var(--royal); }
-.section-head .desc {
-  font-size: 17px;
-  line-height: 1.6;
-  color: rgba(10, 12, 28, 0.7);
-  max-width: 560px;
-}
+.section-head .desc { font-size: 17px; line-height: 1.6; color: rgba(10, 12, 28, 0.7); max-width: 560px; }
 
 /* ------- Services ------- */
 .services { background: var(--paper); }
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1px;
-  background: var(--line);
-  border: 1px solid var(--line);
+.services-grid-wrap { display: grid; grid-template-columns: 1.3fr 1fr; gap: 48px; align-items: stretch; }
+.service-image { position: relative; overflow: hidden; border-radius: 4px; min-height: 500px; }
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+  transition: transform 0.6s ease;
 }
+.service-image:hover img { transform: scale(1.04); }
+.service-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(8, 18, 74, 0.6) 100%);
+  pointer-events: none;
+}
+.service-image .badge {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  z-index: 2;
+  background: var(--yellow);
+  color: var(--royal-ink);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 8px 14px;
+  font-weight: 600;
+}
+.service-grid { display: grid; grid-template-columns: 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); }
 .service-card {
   background: var(--paper);
-  padding: 48px 40px;
+  padding: 36px 32px;
   position: relative;
   transition: background 0.3s;
   cursor: default;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  min-height: 320px;
+  gap: 12px;
+  min-height: 122px;
 }
 .service-card:hover { background: var(--bone); }
-.service-card .num {
-  font-family: var(--mono);
-  font-size: 12px;
-  color: var(--royal);
-  letter-spacing: 0.1em;
-}
+.service-card .num { font-family: var(--mono); font-size: 12px; color: var(--royal); letter-spacing: 0.1em; }
 .service-card h3 {
   font-family: var(--display);
   font-weight: 500;
-  font-size: 32px;
+  font-size: 24px;
   line-height: 1.1;
   letter-spacing: -0.02em;
   color: var(--royal-ink);
-  margin-top: 12px;
 }
-.service-card p {
-  color: rgba(10, 12, 28, 0.72);
-  font-size: 15px;
-  line-height: 1.6;
-  margin-top: auto;
-}
+.service-card p { color: rgba(10, 12, 28, 0.72); font-size: 14px; line-height: 1.55; }
 .service-card .icon {
   position: absolute;
-  top: 40px; right: 40px;
-  width: 48px; height: 48px;
+  top: 32px; right: 32px;
+  width: 40px; height: 40px;
   background: var(--yellow);
   display: grid;
   place-items: center;
   border-radius: 4px;
   font-family: var(--display);
   font-weight: 700;
+  font-size: 14px;
   color: var(--royal-ink);
   transition: transform 0.3s;
 }
@@ -480,7 +397,10 @@ section { padding: 120px 32px; position: relative; }
   padding: 100px 32px;
   position: relative;
   overflow: hidden;
+  isolation: isolate;
 }
+.why-bg { position: absolute; inset: 0; z-index: -1; opacity: 0.15; }
+.why-bg img { width: 100%; height: 100%; object-fit: cover; }
 .why::before {
   content: "";
   position: absolute;
@@ -494,6 +414,8 @@ section { padding: 120px 32px; position: relative; }
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 48px;
+  position: relative;
+  z-index: 1;
 }
 .why-item .num {
   font-family: var(--display);
@@ -504,68 +426,45 @@ section { padding: 120px 32px; position: relative; }
   margin-bottom: 16px;
   font-feature-settings: "tnum";
 }
-.why-item h4 {
-  font-family: var(--display);
-  font-size: 20px;
-  font-weight: 500;
-  margin-bottom: 12px;
-  letter-spacing: -0.01em;
-}
-.why-item p {
-  font-size: 14px;
-  line-height: 1.6;
-  opacity: 0.75;
-}
+.why-item h4 { font-family: var(--display); font-size: 20px; font-weight: 500; margin-bottom: 12px; letter-spacing: -0.01em; }
+.why-item p { font-size: 14px; line-height: 1.6; opacity: 0.8; }
 
 /* ------- Process ------- */
 .process { background: var(--bone); }
-.process-list {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0;
-  border-top: 1px solid var(--line);
+.process-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+.process-image {
+  position: sticky;
+  top: 100px;
+  border-radius: 4px;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
 }
+.process-image img { width: 100%; height: 100%; object-fit: cover; }
+.process-list { display: grid; grid-template-columns: 1fr; gap: 0; border-top: 1px solid var(--line); }
 .process-row {
   display: grid;
-  grid-template-columns: 100px 1fr 2fr;
-  gap: 32px;
-  padding: 36px 0;
+  grid-template-columns: 80px 1fr;
+  gap: 24px;
+  padding: 28px 0;
   border-bottom: 1px solid var(--line);
-  align-items: center;
+  align-items: start;
   transition: padding 0.3s;
 }
-.process-row:hover { padding-left: 16px; }
-.process-row .step {
-  font-family: var(--mono);
-  font-size: 14px;
-  color: var(--royal);
-  letter-spacing: 0.1em;
-}
+.process-row:hover { padding-left: 12px; }
+.process-row .step { font-family: var(--mono); font-size: 12px; color: var(--royal); letter-spacing: 0.1em; padding-top: 6px; }
 .process-row .title {
   font-family: var(--display);
-  font-size: 28px;
+  font-size: 22px;
   font-weight: 500;
   color: var(--royal-ink);
   letter-spacing: -0.015em;
+  margin-bottom: 6px;
 }
-.process-row .body {
-  font-size: 15px;
-  line-height: 1.6;
-  color: rgba(10, 12, 28, 0.7);
-}
+.process-row .body { font-size: 14px; line-height: 1.6; color: rgba(10, 12, 28, 0.7); }
 
 /* ------- Form section ------- */
-.contact {
-  background: var(--paper);
-  position: relative;
-}
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 80px;
-  align-items: start;
-}
-
+.contact { background: var(--paper); position: relative; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px; align-items: start; }
 .contact-info h2 {
   font-family: var(--display);
   font-weight: 400;
@@ -576,14 +475,7 @@ section { padding: 120px 32px; position: relative; }
   margin-bottom: 32px;
 }
 .contact-info h2 em { font-style: italic; color: var(--royal); }
-.contact-info > p {
-  font-size: 17px;
-  line-height: 1.6;
-  color: rgba(10, 12, 28, 0.7);
-  margin-bottom: 48px;
-  max-width: 480px;
-}
-
+.contact-info > p { font-size: 17px; line-height: 1.6; color: rgba(10, 12, 28, 0.7); margin-bottom: 48px; max-width: 480px; }
 .info-block {
   border-top: 1px solid var(--line);
   padding: 24px 0;
@@ -601,21 +493,10 @@ section { padding: 120px 32px; position: relative; }
   color: var(--royal);
   padding-top: 4px;
 }
-.info-block .val {
-  font-family: var(--display);
-  font-size: 20px;
-  font-weight: 500;
-  color: var(--royal-ink);
-  line-height: 1.3;
-}
+.info-block .val { font-family: var(--display); font-size: 20px; font-weight: 500; color: var(--royal-ink); line-height: 1.3; }
 .info-block .val a:hover { color: var(--royal); }
-.info-block .placeholder {
-  color: rgba(10, 12, 28, 0.4);
-  font-style: italic;
-  font-weight: 400;
-}
+.info-block .placeholder { color: rgba(10, 12, 28, 0.4); font-style: italic; font-weight: 400; }
 
-/* Form */
 .form-card {
   background: var(--royal-ink);
   border-radius: 4px;
@@ -643,23 +524,11 @@ section { padding: 120px 32px; position: relative; }
   margin-bottom: 8px;
 }
 .form-card h3 em { font-style: italic; color: var(--yellow); }
-.form-card .form-sub {
-  font-size: 14px;
-  opacity: 0.7;
-  margin-bottom: 36px;
-}
+.form-card .form-sub { font-size: 14px; opacity: 0.7; margin-bottom: 36px; }
 
 form { display: grid; gap: 20px; }
-.form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
-.field {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.field { display: flex; flex-direction: column; gap: 6px; }
 .field label {
   font-family: var(--mono);
   font-size: 10px;
@@ -667,9 +536,7 @@ form { display: grid; gap: 20px; }
   text-transform: uppercase;
   color: var(--yellow);
 }
-.field input,
-.field select,
-.field textarea {
+.field input, .field select, .field textarea {
   background: transparent;
   border: none;
   border-bottom: 1px solid rgba(244, 239, 228, 0.3);
@@ -681,11 +548,8 @@ form { display: grid; gap: 20px; }
   transition: border-color 0.2s;
   border-radius: 0;
 }
-.field input::placeholder,
-.field textarea::placeholder { color: rgba(244, 239, 228, 0.35); }
-.field input:focus,
-.field select:focus,
-.field textarea:focus { border-bottom-color: var(--yellow); }
+.field input::placeholder, .field textarea::placeholder { color: rgba(244, 239, 228, 0.35); }
+.field input:focus, .field select:focus, .field textarea:focus { border-bottom-color: var(--yellow); }
 .field select {
   appearance: none;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' stroke='%23ffd60a' stroke-width='1.5' fill='none'/></svg>");
@@ -696,15 +560,7 @@ form { display: grid; gap: 20px; }
 .field select option { background: var(--royal-ink); color: var(--paper); }
 .field textarea { resize: vertical; min-height: 80px; }
 
-.consent {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  font-size: 12px;
-  opacity: 0.7;
-  line-height: 1.5;
-  margin-top: 4px;
-}
+.consent { display: flex; align-items: flex-start; gap: 12px; font-size: 12px; opacity: 0.7; line-height: 1.5; margin-top: 4px; }
 .consent input { accent-color: var(--yellow); margin-top: 2px; }
 
 button[type="submit"] {
@@ -729,43 +585,15 @@ button[type="submit"]:hover {
   box-shadow: 0 14px 28px -10px rgba(0, 0, 0, 0.5);
 }
 
-.success-msg {
-  display: none;
-  padding: 24px;
-  background: var(--yellow);
-  color: var(--royal-ink);
-  border-radius: 4px;
-  font-weight: 500;
-  text-align: center;
-}
+.success-msg { display: none; padding: 24px; background: var(--yellow); color: var(--royal-ink); border-radius: 4px; font-weight: 500; text-align: center; }
 .success-msg.show { display: block; }
 
 /* ------- Footer ------- */
-footer {
-  background: var(--royal-ink);
-  color: var(--paper);
-  padding: 80px 32px 40px;
-  border-top: 4px solid var(--yellow);
-}
-.footer-inner {
-  max-width: 1400px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 48px;
-  margin-bottom: 64px;
-}
-.footer-brand .logo-mark {
-  background: var(--yellow);
-  color: var(--royal-ink);
-}
-.footer-brand p {
-  margin-top: 24px;
-  font-size: 14px;
-  opacity: 0.7;
-  max-width: 320px;
-  line-height: 1.6;
-}
+footer { background: var(--royal-ink); color: var(--paper); padding: 80px 32px 40px; border-top: 4px solid var(--yellow); }
+.footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 64px; }
+.footer-logo-wrap { display: inline-block; background: var(--paper); padding: 16px 20px; border-radius: 6px; }
+.footer-logo { height: 80px; width: auto; display: block; }
+.footer-brand p { margin-top: 24px; font-size: 14px; opacity: 0.7; max-width: 320px; line-height: 1.6; }
 footer h5 {
   font-family: var(--mono);
   font-size: 11px;
@@ -795,26 +623,18 @@ footer ul a:hover { color: var(--yellow); opacity: 1; }
 
 /* ------- Responsive ------- */
 @media (max-width: 960px) {
-  .hero-inner, .section-head, .contact-grid, .why-grid, .footer-inner {
+  .hero-inner, .section-head, .contact-grid, .why-grid, .footer-inner, .services-grid-wrap, .process-layout {
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  .service-grid { grid-template-columns: 1fr; }
+  .service-image { min-height: 320px; }
+  .process-image { position: relative; top: 0; aspect-ratio: 16 / 10; }
   .why-grid { gap: 40px; }
   .footer-inner { grid-template-columns: 1fr 1fr; }
-  .process-row {
-    grid-template-columns: 1fr;
-    gap: 8px;
-    padding: 24px 0;
-  }
+  .process-row { grid-template-columns: 70px 1fr; gap: 16px; padding: 20px 0; }
   nav ul { display: none; }
-  .menu-toggle {
-    display: block;
-    width: 40px; height: 40px;
-    background: var(--royal-ink);
-    color: var(--paper);
-    border-radius: 4px;
-  }
+  .menu-toggle { display: block; width: 40px; height: 40px; background: var(--royal-ink); color: var(--paper); border-radius: 4px; }
+  .logo-img { height: 52px; }
   section { padding: 80px 24px; }
   .hero { padding: 56px 24px 80px; }
   .form-card { padding: 36px 28px; }
@@ -824,6 +644,7 @@ footer ul a:hover { color: var(--yellow); opacity: 1; }
   .footer-inner { grid-template-columns: 1fr; }
   .hero h1 { font-size: 52px; }
   .footer-bottom { flex-direction: column; }
+  .logo-img { height: 44px; }
 }
 </style>
 </head>
@@ -835,7 +656,7 @@ footer ul a:hover { color: var(--yellow); opacity: 1; }
   <div class="utility-inner">
     <span>Mundzberg Enterprises LLC d/b/a AlphaGator Logistics</span>
     <span class="pulse">Operations active — 8 AM to 6 PM ET</span>
-    <span>MC# [PLACEHOLDER]  |  USDOT# [PLACEHOLDER]</span>
+    <span>MC# 1819235  |  USDOT# 1819235  |  DUNS# 139719149</span>
   </div>
 </div>
 
@@ -843,12 +664,7 @@ footer ul a:hover { color: var(--yellow); opacity: 1; }
 <header class="nav">
   <div class="nav-inner">
     <a class="logo-slot" href="#top" aria-label="AlphaGator Logistics home">
-      <!-- LOGO PLACEHOLDER: replace this <div class="logo-mark"> with <img src="logo.svg" alt="AlphaGator Logistics" class="logo-mark"> -->
-      <div class="logo-mark">A</div>
-      <div class="logo-text">
-        <span class="name">AlphaGator</span>
-        <span class="tag">Logistics — Frederick, MD</span>
-      </div>
+      <img src="alphagator-logo.png" alt="AlphaGator Logistics — Freight Brokering Solutions" class="logo-img" />
     </a>
     <nav>
       <ul>
@@ -865,6 +681,10 @@ footer ul a:hover { color: var(--yellow); opacity: 1; }
 
 <!-- Hero -->
 <section class="hero" id="top">
+  <div class="hero-bg">
+    <img src="hero-warehouse.jpg" alt="" />
+  </div>
+  <div class="hero-overlay"></div>
   <div class="hero-inner">
     <div>
       <div class="eyebrow">Licensed Freight Brokerage · NAICS 488510</div>
@@ -873,7 +693,7 @@ footer ul a:hover { color: var(--yellow); opacity: 1; }
         the way you do.
       </h1>
       <p class="lede">
-        Full truckload, less-than-truckload, and expedited freight across the United States — sourced and dispatched by a dedicated team that treats every load like it's the only one. Headquartered in Frederick, Maryland.
+        Full truckload, less-than-truckload, and expedited freight across the United States — sourced and dispatched by a dedicated team that treats every load like it's the only one. Headquartered in Odenton, Maryland.
       </p>
       <div class="hero-actions">
         <a class="btn-primary" href="#contact">
@@ -925,37 +745,46 @@ footer ul a:hover { color: var(--yellow); opacity: 1; }
       <p class="desc">From a single pallet to dedicated weekly lane programs, we source the right capacity at the right price — and stay on it through delivery.</p>
     </div>
 
-    <div class="service-grid">
-      <article class="service-card">
-        <span class="num">01 / FTL</span>
-        <div class="icon">FT</div>
-        <h3>Full truckload</h3>
-        <p>Dedicated trailers for shipments at full weight or volume. Dry van, refrigerated, and flatbed capacity across the lower 48.</p>
-      </article>
-      <article class="service-card">
-        <span class="num">02 / LTL</span>
-        <div class="icon">LT</div>
-        <h3>Less-than-truckload</h3>
-        <p>Cost-effective consolidation for partial shipments. Tier-one LTL carrier networks with transparent rate quoting.</p>
-      </article>
-      <article class="service-card">
-        <span class="num">03 / EXP</span>
-        <div class="icon">EX</div>
-        <h3>Expedited &amp; time-critical</h3>
-        <p>Cargo van, sprinter, straight truck, and team driver capacity for urgent freight that absolutely cannot be late.</p>
-      </article>
-      <article class="service-card">
-        <span class="num">04 / DED</span>
-        <div class="icon">DL</div>
-        <h3>Dedicated lane management</h3>
-        <p>Standing carrier relationships for recurring origin–destination pairs. Predictable pricing, reserved capacity.</p>
-      </article>
+    <div class="services-grid-wrap">
+      <div class="service-image">
+        <img src="warehouse-loading.jpg" alt="Forklift loading freight pallets onto a truck at a warehouse dock" />
+        <span class="badge">Real operations · Real freight</span>
+      </div>
+      <div class="service-grid">
+        <article class="service-card">
+          <span class="num">01 / FTL</span>
+          <div class="icon">FT</div>
+          <h3>Full truckload</h3>
+          <p>Dedicated trailers for shipments at full weight or volume. Dry van, refrigerated, and flatbed capacity across the lower 48.</p>
+        </article>
+        <article class="service-card">
+          <span class="num">02 / LTL</span>
+          <div class="icon">LT</div>
+          <h3>Less-than-truckload</h3>
+          <p>Cost-effective consolidation for partial shipments. Tier-one LTL carrier networks with transparent rate quoting.</p>
+        </article>
+        <article class="service-card">
+          <span class="num">03 / EXP</span>
+          <div class="icon">EX</div>
+          <h3>Expedited &amp; time-critical</h3>
+          <p>Cargo van, sprinter, straight truck, and team driver capacity for urgent freight that absolutely cannot be late.</p>
+        </article>
+        <article class="service-card">
+          <span class="num">04 / DED</span>
+          <div class="icon">DL</div>
+          <h3>Dedicated lane management</h3>
+          <p>Standing carrier relationships for recurring origin–destination pairs. Predictable pricing, reserved capacity.</p>
+        </article>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- Why us -->
 <section class="why" id="why">
+  <div class="why-bg">
+    <img src="dock-truck.jpg" alt="" />
+  </div>
   <div class="why-grid">
     <div class="why-item">
       <div class="num">01</div>
@@ -988,41 +817,61 @@ footer ul a:hover { color: var(--yellow); opacity: 1; }
       <p class="desc">Standardization is what turns one good shipment into a thousand good shipments. Every load runs the same playbook.</p>
     </div>
 
-    <div class="process-list">
-      <div class="process-row">
-        <span class="step">STEP 01</span>
-        <span class="title">Load intake</span>
-        <span class="body">You send origin, destination, equipment type, and pickup window. We confirm rate and terms in writing the same business day.</span>
+    <div class="process-layout">
+      <div class="process-image">
+        <img src="aerial-forest.jpg" alt="Aerial view of a truck on a winding road through an autumn forest" />
       </div>
-      <div class="process-row">
-        <span class="step">STEP 02</span>
-        <span class="title">Carrier sourcing</span>
-        <span class="body">Our carrier sales team works the approved network and load boards to find capacity that meets your lane and schedule.</span>
-      </div>
-      <div class="process-row">
-        <span class="step">STEP 03</span>
-        <span class="title">Dispatch</span>
-        <span class="body">Formal rate confirmation, pickup numbers, and all required documentation issued to the carrier and copied to your team.</span>
-      </div>
-      <div class="process-row">
-        <span class="step">STEP 04</span>
-        <span class="title">Track &amp; trace</span>
-        <span class="body">Scheduled check-calls and real-time TMS updates. Exceptions get escalated to you before they become a problem.</span>
-      </div>
-      <div class="process-row">
-        <span class="step">STEP 05</span>
-        <span class="title">Delivery confirmation</span>
-        <span class="body">POD captured at delivery. Any discrepancies documented and resolved before the load is closed in our system.</span>
-      </div>
-      <div class="process-row">
-        <span class="step">STEP 06</span>
-        <span class="title">Invoicing</span>
-        <span class="body">Clean invoices on agreed payment terms — Net 30 standard, customizable for established accounts.</span>
-      </div>
-      <div class="process-row">
-        <span class="step">STEP 07</span>
-        <span class="title">Review &amp; iterate</span>
-        <span class="body">Quarterly business reviews on volume accounts. Lane performance, market rate benchmarking, opportunities for dedicated programs.</span>
+
+      <div class="process-list">
+        <div class="process-row">
+          <span class="step">STEP 01</span>
+          <div>
+            <div class="title">Load intake</div>
+            <div class="body">You send origin, destination, equipment type, and pickup window. We confirm rate and terms in writing the same business day.</div>
+          </div>
+        </div>
+        <div class="process-row">
+          <span class="step">STEP 02</span>
+          <div>
+            <div class="title">Carrier sourcing</div>
+            <div class="body">Our carrier sales team works the approved network and load boards to find capacity that meets your lane and schedule.</div>
+          </div>
+        </div>
+        <div class="process-row">
+          <span class="step">STEP 03</span>
+          <div>
+            <div class="title">Dispatch</div>
+            <div class="body">Formal rate confirmation, pickup numbers, and all required documentation issued to the carrier and copied to your team.</div>
+          </div>
+        </div>
+        <div class="process-row">
+          <span class="step">STEP 04</span>
+          <div>
+            <div class="title">Track &amp; trace</div>
+            <div class="body">Scheduled check-calls and real-time TMS updates. Exceptions get escalated to you before they become a problem.</div>
+          </div>
+        </div>
+        <div class="process-row">
+          <span class="step">STEP 05</span>
+          <div>
+            <div class="title">Delivery confirmation</div>
+            <div class="body">POD captured at delivery. Any discrepancies documented and resolved before the load is closed in our system.</div>
+          </div>
+        </div>
+        <div class="process-row">
+          <span class="step">STEP 06</span>
+          <div>
+            <div class="title">Invoicing</div>
+            <div class="body">Clean invoices on agreed payment terms — Net 30 standard, customizable for established accounts.</div>
+          </div>
+        </div>
+        <div class="process-row">
+          <span class="step">STEP 07</span>
+          <div>
+            <div class="title">Review &amp; iterate</div>
+            <div class="body">Quarterly business reviews on volume accounts. Lane performance, market rate benchmarking, opportunities for dedicated programs.</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -1038,18 +887,15 @@ footer ul a:hover { color: var(--yellow); opacity: 1; }
 
         <div class="info-block">
           <span class="key">Office</span>
-          <span class="val">
-            <span class="placeholder">[Street Address]</span><br>
-            Frederick, Maryland <span class="placeholder">[ZIP]</span>
-          </span>
+          <span class="val">Odenton, Maryland</span>
         </div>
         <div class="info-block">
           <span class="key">Phone</span>
-          <span class="val"><a href="tel:#" class="placeholder">[Phone Number]</a></span>
+          <span class="val"><a href="tel:+13018350001">301-835-0001</a></span>
         </div>
         <div class="info-block">
           <span class="key">Email</span>
-          <span class="val"><a href="mailto:#" class="placeholder">[contact@email.com]</a></span>
+          <span class="val"><a href="mailto:team@alphagatorlogistics.com">team@alphagatorlogistics.com</a></span>
         </div>
         <div class="info-block">
           <span class="key">Hours</span>
@@ -1058,8 +904,9 @@ footer ul a:hover { color: var(--yellow); opacity: 1; }
         <div class="info-block">
           <span class="key">Authority</span>
           <span class="val">
-            MC# <span class="placeholder">[XXXXXXX]</span><br>
-            USDOT# <span class="placeholder">[XXXXXXX]</span>
+            MC# 1819235<br>
+            USDOT# 1819235<br>
+            DUNS# 139719149
           </span>
         </div>
       </div>
@@ -1123,7 +970,7 @@ footer ul a:hover { color: var(--yellow); opacity: 1; }
           <div class="form-row">
             <div class="field">
               <label for="origin">Origin (city, state)</label>
-              <input id="origin" name="origin" type="text" placeholder="Frederick, MD" />
+              <input id="origin" name="origin" type="text" placeholder="Odenton, MD" />
             </div>
             <div class="field">
               <label for="destination">Destination (city, state)</label>
@@ -1159,14 +1006,10 @@ footer ul a:hover { color: var(--yellow); opacity: 1; }
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <a class="logo-slot" href="#top">
-        <div class="logo-mark">A</div>
-        <div class="logo-text">
-          <span class="name" style="color: var(--paper);">AlphaGator</span>
-          <span class="tag" style="color: var(--yellow);">Logistics</span>
-        </div>
+      <a href="#top" class="footer-logo-wrap" aria-label="AlphaGator Logistics home">
+        <img src="alphagator-logo.png" alt="AlphaGator Logistics" class="footer-logo" />
       </a>
-      <p>Mundzberg Enterprises LLC, doing business as AlphaGator Logistics. A licensed property broker headquartered in Frederick, Maryland.</p>
+      <p>Mundzberg Enterprises LLC, doing business as AlphaGator Logistics. A licensed property broker headquartered in Odenton, Maryland.</p>
     </div>
     <div>
       <h5>Services</h5>
@@ -1189,15 +1032,15 @@ footer ul a:hover { color: var(--yellow); opacity: 1; }
     <div>
       <h5>Reach us</h5>
       <ul>
-        <li><span style="opacity:0.6;">[Phone Number]</span></li>
-        <li><span style="opacity:0.6;">[Email Address]</span></li>
-        <li><span style="opacity:0.6;">Frederick, MD</span></li>
+        <li><a href="tel:+13018350001">301-835-0001</a></li>
+        <li><a href="mailto:team@alphagatorlogistics.com">team@alphagatorlogistics.com</a></li>
+        <li><span style="opacity:0.6;">Odenton, MD</span></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
     <span>© 2025 Mundzberg Enterprises LLC</span>
-    <span>MC# [Placeholder] · USDOT# [Placeholder]</span>
+    <span>MC# 1819235 · USDOT# 1819235 · DUNS# 139719149</span>
   </div>
 </footer>
 
@@ -1207,13 +1050,8 @@ footer ul a:hover { color: var(--yellow); opacity: 1; }
   const success = document.getElementById('successMsg');
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    if (!form.checkValidity()) {
-      form.reportValidity();
-      return;
-    }
+    if (!form.checkValidity()) { form.reportValidity(); return; }
     // TODO: POST form data to your endpoint here
-    // const data = Object.fromEntries(new FormData(form));
-    // fetch('/api/lead', { method: 'POST', body: JSON.stringify(data) })
     form.style.display = 'none';
     success.classList.add('show');
   });
