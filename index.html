@@ -160,19 +160,6 @@
   gtag('config', 'G-PGKHS4PD7Y');
 </script>
 
-<!-- Salesforce Web-to-Lead: reCAPTCHA + timestamp -->
-<script src="https://www.google.com/recaptcha/api.js"></script>
-<script>
-  function timestamp() {
-    var response = document.getElementById("g-recaptcha-response");
-    if (response == null || response.value.trim() == "") {
-      var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);
-      elems["ts"] = JSON.stringify(new Date().getTime());
-      document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems);
-    }
-  }
-  setInterval(timestamp, 500);
-</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -1085,7 +1072,6 @@ footer ul a:hover { color: var(--yellow); opacity: 1; }
 
         <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00Da500001Y5VEh" method="POST">
 
-          <input type="hidden" name="captcha_settings" value='{"keyname":"Formula1","fallback":"true","orgId":"00Da500001Y5VEh","ts":""}'>
           <input type="hidden" name="oid" value="00Da500001Y5VEh">
           <input type="hidden" name="retURL" value="https://www.alphagatorlogistics.com">
 
@@ -1354,7 +1340,6 @@ footer ul a:hover { color: var(--yellow); opacity: 1; }
             </select>
           </div>
 
-          <div class="g-recaptcha" data-sitekey="6Ld0D_EsAAAAAEpGZ9XgH9EUp-hcFE7vI9MhRxwD" style="margin-top: 8px;"></div>
 
           <button type="submit">
             Submit request
