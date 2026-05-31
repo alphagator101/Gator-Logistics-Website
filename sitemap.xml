@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!--
+    AlphaGator Logistics — Sitemap
+    Mundzberg Enterprises LLC d/b/a AlphaGator Logistics
+    https://www.alphagatorlogistics.com
+    Last updated: 2026-05-31
+    Submit to Google Search Console at:
+    https://search.google.com/search-console
+  -->
+
+  <!-- ============================================================ -->
+  <!-- HOMEPAGE                                                      -->
+  <!-- ============================================================ -->
+  <url>
+    <loc>https://www.alphagatorlogistics.com/</loc>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+
+    <!-- Hero image -->
+    <image:image>
+      <image:loc>https://www.alphagatorlogistics.com/hero-warehouse.jpg</image:loc>
+      <image:title>AlphaGator Logistics — Licensed Freight Brokerage, Odenton Maryland</image:title>
+      <image:caption>Semi truck at a warehouse loading dock at night — AlphaGator Logistics freight brokerage Odenton Maryland</image:caption>
+      <image:geo_location>Odenton, Maryland, US</image:geo_location>
+      <image:license>https://www.alphagatorlogistics.com</image:license>
+    </image:image>
+
+    <!-- Services section image -->
+    <image:image>
+      <image:loc>https://www.alphagatorlogistics.com/warehouse-loading.jpg</image:loc>
+      <image:title>FTL and LTL Freight Loading at Warehouse Dock</image:title>
+      <image:caption>Forklift loading freight pallets onto a truck at a warehouse dock — FTL and LTL freight brokerage services</image:caption>
+      <image:geo_location>Odenton, Maryland, US</image:geo_location>
+      <image:license>https://www.alphagatorlogistics.com</image:license>
+    </image:image>
+
+    <!-- Process section image -->
+    <image:image>
+      <image:loc>https://www.alphagatorlogistics.com/aerial-forest.jpg</image:loc>
+      <image:title>Nationwide Freight Brokerage Mid-Atlantic — Aerial Highway View</image:title>
+      <image:caption>Aerial view of a semi truck on a winding highway through autumn forest — nationwide freight brokerage Mid-Atlantic</image:caption>
+      <image:geo_location>Mid-Atlantic, United States</image:geo_location>
+      <image:license>https://www.alphagatorlogistics.com</image:license>
+    </image:image>
+
+    <!-- Why us section background image -->
+    <image:image>
+      <image:loc>https://www.alphagatorlogistics.com/dock-truck.jpg</image:loc>
+      <image:title>Licensed Freight Broker Maryland — Truck at Loading Dock</image:title>
+      <image:caption>Red semi truck backed into a loading dock — licensed freight broker Maryland</image:caption>
+      <image:geo_location>Maryland, United States</image:geo_location>
+      <image:license>https://www.alphagatorlogistics.com</image:license>
+    </image:image>
+
+    <!-- Logo -->
+    <image:image>
+      <image:loc>https://www.alphagatorlogistics.com/alphagator-logo.png</image:loc>
+      <image:title>AlphaGator Logistics Logo — Freight Brokering Solutions</image:title>
+      <image:caption>AlphaGator Logistics — Mundzberg Enterprises LLC, Odenton Maryland</image:caption>
+      <image:license>https://www.alphagatorlogistics.com</image:license>
+    </image:image>
+  </url>
+
+  <!-- ============================================================ -->
+  <!-- SECTION ANCHORS                                               -->
+  <!-- These help Google understand and index each section          -->
+  <!-- individually for targeted keyword searches                   -->
+  <!-- ============================================================ -->
+
+  <!-- Services Section -->
+  <url>
+    <loc>https://www.alphagatorlogistics.com/#services</loc>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.alphagatorlogistics.com/warehouse-loading.jpg</image:loc>
+      <image:title>Freight Brokerage Services — FTL, LTL, Expedited, Dedicated Lanes</image:title>
+      <image:caption>Full truckload, less-than-truckload, expedited and dedicated lane freight brokerage services — AlphaGator Logistics</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Why Us Section -->
+  <url>
+    <loc>https://www.alphagatorlogistics.com/#why</loc>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Process Section -->
+  <url>
+    <loc>https://www.alphagatorlogistics.com/#process</loc>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.alphagatorlogistics.com/aerial-forest.jpg</image:loc>
+      <image:title>Seven Step Load Lifecycle — AlphaGator Logistics Freight Process</image:title>
+      <image:caption>AlphaGator Logistics standardized seven-step load lifecycle from intake to invoice</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Contact / Quote Request Section -->
+  <url>
+    <loc>https://www.alphagatorlogistics.com/#contact</loc>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+</urlset>
