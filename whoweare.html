@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Who We Are — AlphaGator Logistics</title>
+<meta name="description" content="AlphaGator Logistics is a 100% Service-Disabled Veteran-Owned freight brokerage headquartered in Odenton, Maryland. Learn our story, our team, and our values." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<style>
+:root {
+  --royal: #1a3aa8;
+  --royal-deep: #0f2270;
+  --royal-ink: #08124a;
+  --yellow: #ffd60a;
+  --yellow-warm: #f5b800;
+  --bone: #f4efe4;
+  --paper: #faf6ec;
+  --ink: #0a0c1c;
+  --line: rgba(8, 18, 74, 0.18);
+
+  --display: "Fraunces", "Times New Roman", serif;
+  --sans: "Bricolage Grotesque", -apple-system, BlinkMacSystemFont, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+img { max-width: 100%; display: block; }
+
+/* ------- Utility bar ------- */
+.utility {
+  background: var(--royal-ink);
+  color: var(--bone);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 8px 0;
+}
+.utility-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.utility span { opacity: 0.8; }
+.utility .pulse {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 1;
+  color: var(--yellow);
+}
+.utility .pulse::before {
+  content: "";
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--yellow);
+  box-shadow: 0 0 0 0 var(--yellow);
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(255, 214, 10, 0.6); }
+  70%  { box-shadow: 0 0 0 8px rgba(255, 214, 10, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 214, 10, 0); }
+}
+
+/* ------- Nav ------- */
+header.nav {
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(8px);
+}
+.nav-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 18px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+.logo-slot {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.logo-mark {
+  width: 44px;
+  height: 44px;
+  border-radius: 4px;
+  object-fit: contain;
+  display: block;
+}
+.logo-text { display: flex; flex-direction: column; line-height: 1; }
+.logo-text .name {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+  color: var(--royal-ink);
+}
+.logo-text .tag {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--royal);
+  margin-top: 4px;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 36px;
+  align-items: center;
+}
+nav a {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--royal-ink);
+  position: relative;
+  padding: 4px 0;
+  transition: color 0.2s;
+}
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: -2px;
+  width: 0; height: 2px;
+  background: var(--yellow);
+  transition: width 0.25s ease;
+}
+nav a:hover::after { width: 100%; }
+nav a.active::after { width: 100%; }
+.nav-cta {
+  background: var(--royal);
+  color: var(--paper);
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: transform 0.2s, background 0.2s;
+}
+.nav-cta:hover { background: var(--royal-deep); transform: translateY(-1px); }
+.menu-toggle { display: none; }
+
+/* ------- Page hero ------- */
+.page-hero {
+  padding: 80px 32px 100px;
+  background:
+    radial-gradient(ellipse at 90% 10%, rgba(255, 214, 10, 0.14), transparent 50%),
+    radial-gradient(ellipse at 5% 85%, rgba(26, 58, 168, 0.08), transparent 50%),
+    var(--paper);
+  position: relative;
+  overflow: hidden;
+}
+.page-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 80px 80px;
+  opacity: 0.3;
+  mask-image: linear-gradient(180deg, transparent, black 30%, black 70%, transparent);
+  pointer-events: none;
+}
+.page-hero-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--royal);
+  margin-bottom: 28px;
+}
+.eyebrow::before {
+  content: "";
+  width: 32px; height: 1px;
+  background: var(--royal);
+}
+.page-hero h1 {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(48px, 6vw, 96px);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  color: var(--royal-ink);
+}
+.page-hero h1 em {
+  font-style: italic;
+  color: var(--royal);
+  position: relative;
+}
+.page-hero h1 em::after {
+  content: "";
+  position: absolute;
+  left: -4px; right: -4px;
+  bottom: 8%;
+  height: 22%;
+  background: var(--yellow);
+  z-index: -1;
+  transform: skewX(-5deg);
+}
+.page-hero p.lede {
+  margin-top: 28px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: rgba(10, 12, 28, 0.72);
+  max-width: 520px;
+}
+
+/* SDVOSB badge card */
+.sdvosb-card {
+  background: var(--royal-ink);
+  color: var(--paper);
+  border-radius: 4px;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+}
+.sdvosb-card::before {
+  content: "";
+  position: absolute;
+  bottom: -48px; right: -48px;
+  width: 200px; height: 200px;
+  background: var(--yellow);
+  border-radius: 50%;
+  opacity: 0.12;
+}
+.sdvosb-card .badge-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  margin-bottom: 20px;
+}
+.sdvosb-star-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.sdvosb-star {
+  font-size: 22px;
+  color: var(--yellow);
+}
+.sdvosb-card h3 {
+  font-family: var(--display);
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  margin-bottom: 16px;
+}
+.sdvosb-card p {
+  font-size: 14px;
+  line-height: 1.65;
+  opacity: 0.78;
+}
+.sdvosb-divider {
+  margin: 24px 0;
+  border: none;
+  border-top: 1px solid rgba(244, 239, 228, 0.15);
+}
+.sdvosb-card .cert-line {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--yellow);
+  opacity: 0.85;
+}
+
+/* ------- Section base ------- */
+section { padding: 100px 32px; position: relative; }
+.container { max-width: 1400px; margin: 0 auto; }
+
+/* ------- Story section ------- */
+.story { background: var(--bone); }
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+.story-grid h2 {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(36px, 4.5vw, 60px);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: var(--royal-ink);
+  margin-bottom: 32px;
+}
+.story-grid h2 em { font-style: italic; color: var(--royal); }
+.story-body p {
+  font-size: 16px;
+  line-height: 1.75;
+  color: rgba(10, 12, 28, 0.78);
+  margin-bottom: 20px;
+}
+.story-body p:last-child { margin-bottom: 0; }
+.pull-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 28px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  margin: 36px 0;
+}
+.pull-stat .num {
+  font-family: var(--display);
+  font-size: 56px;
+  font-weight: 600;
+  color: var(--royal);
+  line-height: 1;
+}
+.pull-stat .label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(10, 12, 28, 0.55);
+}
+
+/* ------- Values strip ------- */
+.values {
+  background: var(--royal-ink);
+  color: var(--paper);
+  padding: 96px 32px;
+  position: relative;
+  overflow: hidden;
+}
+.values::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--yellow), transparent);
+}
+.values-head {
+  max-width: 1400px;
+  margin: 0 auto 64px;
+}
+.values-head h2 {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(36px, 4.5vw, 60px);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+}
+.values-head h2 em { font-style: italic; color: var(--yellow); }
+.values-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border-top: 1px solid rgba(244, 239, 228, 0.12);
+}
+.value-item {
+  padding: 40px 40px 40px 0;
+  border-bottom: none;
+}
+.value-item:nth-child(n+4) { border-bottom: none; }
+.value-item .v-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  color: var(--yellow);
+  margin-bottom: 16px;
+}
+.value-item h4 {
+  font-family: var(--display);
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin-bottom: 12px;
+}
+.value-item p {
+  font-size: 14px;
+  line-height: 1.65;
+  opacity: 0.72;
+}
+
+/* ------- Team section ------- */
+.team { background: var(--paper); }
+.team-head {
+  margin-bottom: 64px;
+}
+.team-head h2 {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(36px, 4.5vw, 60px);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: var(--royal-ink);
+  margin-bottom: 16px;
+}
+.team-head h2 em { font-style: italic; color: var(--royal); }
+.team-head p {
+  font-size: 17px;
+  line-height: 1.6;
+  color: rgba(10, 12, 28, 0.7);
+  max-width: 600px;
+}
+
+/* Principal card */
+.principal-card {
+  background: var(--bone);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 56px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 56px;
+  align-items: start;
+  margin-bottom: 48px;
+}
+.principal-badge {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.principal-avatar {
+  width: 100%;
+  aspect-ratio: 1;
+  max-width: 220px;
+  background: var(--royal-ink);
+  border-radius: 4px;
+  display: grid;
+  place-items: center;
+  font-family: var(--display);
+  font-size: 64px;
+  color: var(--yellow);
+  font-weight: 700;
+}
+.principal-role {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--royal);
+}
+.principal-info h3 {
+  font-family: var(--display);
+  font-size: 36px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--royal-ink);
+  margin-bottom: 6px;
+}
+.principal-info .title-line {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--royal);
+  margin-bottom: 24px;
+}
+.principal-info p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: rgba(10, 12, 28, 0.75);
+  margin-bottom: 16px;
+}
+.principal-info p:last-of-type { margin-bottom: 0; }
+.service-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--royal-ink);
+  color: var(--yellow);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 8px 14px;
+  border-radius: 999px;
+  margin-top: 20px;
+}
+.service-tag::before {
+  content: "★";
+  font-size: 12px;
+}
+
+/* Bosnia team grid */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+.team-card {
+  background: var(--paper);
+  padding: 32px 24px;
+  transition: background 0.25s;
+}
+.team-card:hover { background: var(--bone); }
+.team-card .pos-num {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: var(--royal);
+  margin-bottom: 20px;
+}
+.team-card .pos-icon {
+  width: 40px; height: 40px;
+  background: var(--yellow);
+  border-radius: 4px;
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+  margin-bottom: 16px;
+  transition: transform 0.25s;
+}
+.team-card:hover .pos-icon { transform: rotate(-6deg) scale(1.08); }
+.team-card h4 {
+  font-family: var(--display);
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--royal-ink);
+  line-height: 1.25;
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+}
+.team-card p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(10, 12, 28, 0.6);
+}
+
+/* ------- Location strip ------- */
+.location {
+  background: var(--bone);
+  padding: 80px 32px;
+}
+.location-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.location-copy h2 {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: var(--royal-ink);
+  margin-bottom: 20px;
+}
+.location-copy h2 em { font-style: italic; color: var(--royal); }
+.location-copy p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(10, 12, 28, 0.72);
+  max-width: 500px;
+}
+.location-facts {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid var(--line);
+}
+.location-fact {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 20px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+  align-items: baseline;
+}
+.location-fact .key {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--royal);
+}
+.location-fact .val {
+  font-family: var(--display);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--royal-ink);
+  line-height: 1.3;
+}
+
+/* ------- CTA band ------- */
+.cta-band {
+  background: var(--royal-ink);
+  color: var(--paper);
+  padding: 80px 32px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.cta-band::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--yellow), transparent);
+}
+.cta-band h2 {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(32px, 4vw, 56px);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  margin-bottom: 12px;
+}
+.cta-band h2 em { font-style: italic; color: var(--yellow); }
+.cta-band p {
+  font-size: 16px;
+  opacity: 0.72;
+  margin-bottom: 36px;
+}
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--yellow);
+  color: var(--royal-ink);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  padding: 16px 28px;
+  border-radius: 999px;
+  transition: all 0.2s ease;
+}
+.btn-primary:hover {
+  background: var(--paper);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px -10px rgba(0,0,0,0.5);
+}
+.btn-primary svg { transition: transform 0.2s; }
+.btn-primary:hover svg { transform: translateX(4px); }
+
+/* ------- Footer ------- */
+footer {
+  background: var(--royal-ink);
+  color: var(--paper);
+  padding: 80px 32px 40px;
+  border-top: 4px solid var(--yellow);
+}
+.footer-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 64px;
+}
+.footer-brand .logo-mark { /* logo image — no background needed */ }
+.footer-brand p {
+  margin-top: 24px;
+  font-size: 14px;
+  opacity: 0.7;
+  max-width: 320px;
+  line-height: 1.6;
+}
+footer h5 {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  margin-bottom: 20px;
+}
+footer ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+footer ul a { font-size: 14px; opacity: 0.85; transition: color 0.2s, opacity 0.2s; }
+footer ul a:hover { color: var(--yellow); opacity: 1; }
+.footer-bottom {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 32px;
+  border-top: 1px solid rgba(244, 239, 228, 0.12);
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.55;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* ------- Responsive ------- */
+@media (max-width: 1024px) {
+  .team-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 960px) {
+  .page-hero-inner, .story-grid, .location-inner, .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .values-grid { grid-template-columns: 1fr 1fr; }
+  .mission-vision-grid { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: repeat(2, 1fr); }
+  .principal-card {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 36px;
+  }
+  .principal-avatar { max-width: 120px; }
+  nav ul { display: none; }
+  .menu-toggle {
+    display: block;
+    width: 40px; height: 40px;
+    background: var(--royal-ink);
+    color: var(--paper);
+    border-radius: 4px;
+  }
+  section { padding: 72px 24px; }
+  .page-hero { padding: 56px 24px 72px; }
+}
+@media (max-width: 600px) {
+  .values-grid { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr 1fr; }
+  .footer-bottom { flex-direction: column; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Utility bar -->
+<div class="utility">
+  <div class="utility-inner">
+    <span>Mundzberg Enterprises LLC d/b/a AlphaGator Logistics</span>
+    <span class="pulse">100% Service-Disabled Veteran-Owned Small Business</span>
+    <span>MC# 1819235 &nbsp;|&nbsp; USDOT# 4572948 &nbsp;|&nbsp; DUNS# 139719149</span>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="nav">
+  <div class="nav-inner">
+    <a class="logo-slot" href="index.html" aria-label="AlphaGator Logistics home">
+      <img src="logo.png" alt="AlphaGator Logistics" class="logo-mark" />
+      <div class="logo-text">
+        <span class="name">AlphaGator</span>
+        <span class="tag">Logistics — Odenton, MD</span>
+      </div>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#why">Why us</a></li>
+        <li><a href="index.html#process">Process</a></li>
+        <li><a href="who-we-are.html" class="active">Who we are</a></li>
+        <li><a class="nav-cta" href="index.html#contact">Get a quote</a></li>
+      </ul>
+    </nav>
+    <button class="menu-toggle" aria-label="Open menu">≡</button>
+  </div>
+</header>
+
+<!-- Page hero -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div>
+      <div class="eyebrow">About AlphaGator Logistics</div>
+      <h1>Built by a <em>veteran.</em><br>Run with purpose.</h1>
+      <p class="lede">
+        AlphaGator Logistics is a 100% Service-Disabled Veteran-Owned Small Business headquartered in Odenton, Maryland. We broker freight the way good soldiers operate — with discipline, clear communication, and an unwillingness to leave anyone behind.
+      </p>
+    </div>
+
+    <div class="sdvosb-card">
+      <div class="badge-label">Ownership &amp; Certification</div>
+      <div class="sdvosb-star-row">
+        <span class="sdvosb-star">★</span>
+        <span class="sdvosb-star">★</span>
+        <span class="sdvosb-star">★</span>
+      </div>
+      <h3>100% Service-Disabled Veteran-Owned Small Business</h3>
+      <p>Mundzberg Enterprises LLC is proudly certified as an SDVOSB — owned and controlled by a veteran who served and was disabled in the line of duty. That service shapes how we operate, every single day.</p>
+      <hr class="sdvosb-divider" />
+      <div class="cert-line">SDVOSB · NAICS 488510 · Odenton, Maryland</div>
+    </div>
+  </div>
+</section>
+
+<!-- Our story -->
+<section class="story">
+  <div class="container">
+    <div class="story-grid">
+      <div>
+        <h2>The story<br>behind <em>AlphaGator.</em></h2>
+        <div class="pull-stat">
+          <span class="num">$89B</span>
+          <span class="label">U.S. freight brokerage market — and we're just getting started</span>
+        </div>
+        <div class="pull-stat" style="margin-top:0; border-top:none;">
+          <span class="num">Mid-Atlantic</span>
+          <span class="label">Our home market · MD · VA · PA · WV</span>
+        </div>
+      </div>
+
+      <div class="story-body">
+        <p>
+          AlphaGator Logistics was founded on a simple conviction: shippers in the Mid-Atlantic deserve a freight partner who combines the pricing power of a national broker with the personal accountability of someone who genuinely has skin in the game. That's not a marketing line — it's the operating philosophy of a veteran who knows what it means to be responsible for a mission.
+        </p>
+        <p>
+          The company was built asset-light by design, structured around a lean, specialized operations team that handles every functional layer of the brokerage — carrier sourcing, load coordination, real-time tracking, and billing — with the kind of role clarity you'd expect from a well-run unit. No generalists juggling everything. No dropped loads because someone was spread too thin.
+        </p>
+        <p>
+          Odenton, Maryland puts us in the heart of the Baltimore-Washington corridor — minutes from BWI, directly accessible via I-97 and Route 32, and a short run from the I-95 Northeast Corridor and the Port of Baltimore. It's a deliberate choice — not a ZIP code picked at random. We're embedded in one of the most freight-dense corridors in the country, and we intend to become one of the most trusted names in it.
+        </p>
+        <p>
+          We're a growth-stage brokerage, and we own that. It means our clients aren't account numbers in a queue. It means the managing principal knows your lanes. It means when something goes sideways on a load, you're talking to someone who cares — because this company exists because of the people who trust us with their freight.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Mission & Vision -->
+<section class="values">
+  <div class="values-head" style="max-width:1400px; margin: 0 auto 64px;">
+    <h2>Our <em>mission &amp; vision.</em></h2>
+  </div>
+  <div style="max-width:1400px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(244,239,228,0.12); border: 1px solid rgba(244,239,228,0.12);">
+    <div style="padding: 48px 48px 48px 0; border-right: 1px solid rgba(244,239,228,0.12);">
+      <div style="font-family: var(--mono); font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--yellow); margin-bottom: 20px;">Our Mission</div>
+      <p style="font-family: var(--display); font-size: 20px; font-weight: 400; line-height: 1.55; letter-spacing: -0.01em; opacity: 0.92;">To deliver reliable, transparent, and cost-effective freight brokerage solutions that create lasting value for shippers and carrier partners alike — powered by a dedicated global team committed to operational excellence, compliance, and service integrity.</p>
+    </div>
+    <div style="padding: 48px 0 48px 48px;">
+      <div style="font-family: var(--mono); font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--yellow); margin-bottom: 20px;">Our Vision</div>
+      <p style="font-family: var(--display); font-size: 20px; font-weight: 400; line-height: 1.55; letter-spacing: -0.01em; opacity: 0.92;">To become a trusted, top-tier freight brokerage in the Mid-Atlantic region within five years — recognized for exceptional service quality, competitive pricing, and a people-first culture that spans borders and drives sustainable growth for all stakeholders.</p>
+    </div>
+  </div>
+
+  <!-- Core Values -->
+  <div style="max-width:1400px; margin: 64px auto 0;">
+    <div style="font-family: var(--mono); font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--yellow); margin-bottom: 32px; opacity: 0.7;">Core Values &amp; Operating Pillars</div>
+  </div>
+  <div class="values-grid">
+    <div class="value-item">
+      <div class="v-num">01</div>
+      <h4>Reliability</h4>
+      <p>Every load, every lane, every time. We stand behind our commitments to shippers and carriers with the consistency that builds long-term trust.</p>
+    </div>
+    <div class="value-item">
+      <div class="v-num">02</div>
+      <h4>Transparency</h4>
+      <p>Open, honest communication at every stage of the shipment — no surprises, no excuses, and no hidden fees.</p>
+    </div>
+    <div class="value-item">
+      <div class="v-num">03</div>
+      <h4>Competitiveness</h4>
+      <p>Our efficient operating model enables us to deliver shipper pricing and carrier rates that rival the largest brokers in the industry.</p>
+    </div>
+    <div class="value-item">
+      <div class="v-num">04</div>
+      <h4>Excellence</h4>
+      <p>From carrier vetting to invoice accuracy, we hold every process to a standard that reflects pride in our work and respect for our partners.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Team -->
+<section class="team">
+  <div class="container">
+    <div class="team-head">
+      <h2>The people who<br>move your <em>freight.</em></h2>
+      <p>AlphaGator operates with a deliberately structured team — one specialist per function, no generalists, clear accountability on every load.</p>
+    </div>
+
+    <!-- Managing principal -->
+    <div class="principal-card">
+      <div class="principal-badge">
+        <div class="principal-avatar">A</div>
+        <div class="principal-role">Managing Principal<br>Odenton, Maryland</div>
+      </div>
+      <div class="principal-info">
+        <h3>[Owner Name]</h3>
+        <div class="title-line">President &amp; CEO · Mundzberg Enterprises LLC</div>
+        <p>
+          [Owner Name] is the sole member and managing principal of Mundzberg Enterprises LLC, holding 100% ownership interest in the company. As a Service-Disabled Veteran, [he/she/they] brings [X] years of experience in [relevant field] alongside the leadership discipline and operational rigor developed through military service.
+        </p>
+        <p>
+          From the Odenton office, [he/she/they] oversees all shipper relationships, strategic business development, regulatory compliance, and direct supervision of the operations team. [He/She/They] is engaged in the business on a full-time basis and is the named point of contact for every client account.
+        </p>
+        <p>
+          [Add specific background — prior logistics roles, industry certifications such as TIA membership or CTB designation, key career highlights.]
+        </p>
+        <span class="service-tag">U.S. Military Veteran · Service-Disabled</span>
+      </div>
+    </div>
+
+    <!-- Operations team -->
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="pos-num">POSITION · 01</div>
+        <div class="pos-icon">📡</div>
+        <h4>Carrier Sales Representative</h4>
+        <p>Builds and manages the carrier network. Outbound sourcing on DAT and Truckstop.com, rate negotiation, FMCSA compliance checks, and load coverage.</p>
+      </div>
+      <div class="team-card">
+        <div class="pos-num">POSITION · 02</div>
+        <div class="pos-icon">📋</div>
+        <h4>Shipper Sales Representative</h4>
+        <p>Identifies, contacts, and onboards new shipper accounts. Manages the CRM pipeline and coordinates discovery calls with the managing principal.</p>
+      </div>
+      <div class="team-card">
+        <div class="pos-num">POSITION · 03</div>
+        <div class="pos-icon">🚚</div>
+        <h4>Load Coordinator / Dispatcher</h4>
+        <p>Owns the load from intake to carrier confirmation. TMS entry, rate confirmations, documentation, and real-time dispatch management across active loads.</p>
+      </div>
+      <div class="team-card">
+        <div class="pos-num">POSITION · 04</div>
+        <div class="pos-icon">🤝</div>
+        <h4>Account Executive</h4>
+        <p>Owns the shipper relationship from first load through long-term retention. Conducts business reviews, identifies lane expansion opportunities, and ensures every account receives consistent, proactive service.</p>
+      </div>
+      <div class="team-card">
+        <div class="pos-num">POSITION · 05</div>
+        <div class="pos-icon">🧾</div>
+        <h4>Operations &amp; Billing Coordinator</h4>
+        <p>Manages carrier onboarding packets, compliance monitoring, shipper invoicing, carrier payments, and financial recordkeeping in QuickBooks.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Location -->
+<section class="location">
+  <div class="location-inner">
+    <div class="location-copy">
+      <h2>Rooted in<br><em>Odenton, Maryland.</em></h2>
+      <p>
+        Odenton sits in the heart of the Baltimore-Washington corridor — directly connected via I-97 and Route 32, with quick access to I-95 and minutes from the Port of Baltimore and BWI. We're centrally positioned to serve shippers across Maryland, Virginia, Pennsylvania, and West Virginia. Our location isn't incidental; it's strategic.
+      </p>
+    </div>
+    <div class="location-facts">
+      <div class="location-fact">
+        <span class="key">Entity</span>
+        <span class="val">Mundzberg Enterprises LLC</span>
+      </div>
+      <div class="location-fact">
+        <span class="key">DBA</span>
+        <span class="val">AlphaGator Logistics</span>
+      </div>
+      <div class="location-fact">
+        <span class="key">State</span>
+        <span class="val">Maryland LLC</span>
+      </div>
+      <div class="location-fact">
+        <span class="key">NAICS</span>
+        <span class="val">488510</span>
+      </div>
+      <div class="location-fact">
+        <span class="key">Authority</span>
+        <span class="val">FMCSA Property Broker · MC# 1819235</span>
+      </div>
+      <div class="location-fact">
+        <span class="key">USDOT#</span>
+        <span class="val">4572948</span>
+      </div>
+      <div class="location-fact">
+        <span class="key">DUNS#</span>
+        <span class="val">139719149</span>
+      </div>
+      <div class="location-fact">
+        <span class="key">Bond</span>
+        <span class="val">$75,000 BMC-84 Surety Bond</span>
+      </div>
+      <div class="location-fact">
+        <span class="key">Ownership</span>
+        <span class="val">100% SDVOSB</span>
+      </div>
+      <div class="location-fact">
+        <span class="key">Hours</span>
+        <span class="val">Mon – Fri · 8:00 AM – 6:00 PM ET</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band">
+  <h2>Ready to move freight<br>with a team that <em>shows up?</em></h2>
+  <p>Tell us what you're shipping and we'll come back with a rate and a real person — usually within one business day.</p>
+  <a class="btn-primary" href="index.html#contact">
+    Request a quote
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 8h12m0 0L9 3m5 5l-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a class="logo-slot" href="index.html">
+        <img src="logo.png" alt="AlphaGator Logistics" class="logo-mark" />
+        <div class="logo-text">
+          <span class="name" style="color:var(--paper);">AlphaGator</span>
+          <span class="tag" style="color:var(--yellow);">Logistics</span>
+        </div>
+      </a>
+      <p>Mundzberg Enterprises LLC, doing business as AlphaGator Logistics. A 100% Service-Disabled Veteran-Owned licensed property broker headquartered in Odenton, Maryland.</p>
+    </div>
+    <div>
+      <h5>Services</h5>
+      <ul>
+        <li><a href="index.html#services">Full truckload</a></li>
+        <li><a href="index.html#services">LTL</a></li>
+        <li><a href="index.html#services">Expedited</a></li>
+        <li><a href="index.html#services">Dedicated lanes</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Company</h5>
+      <ul>
+        <li><a href="who-we-are.html">Who we are</a></li>
+        <li><a href="index.html#why">Why us</a></li>
+        <li><a href="index.html#process">Process</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Reach us</h5>
+      <ul>
+        <li><a href="tel:+13018350001" style="opacity:0.85;">301-835-0001</a></li>
+        <li><a href="mailto:team@alphagatorlogistics.com" style="opacity:0.85;">team@alphagatorlogistics.com</a></li>
+        <li><span style="opacity:0.6;">Odenton, MD</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Mundzberg Enterprises LLC · SDVOSB</span>
+    <span>MC# 1819235 · USDOT# 4572948 · DUNS# 139719149</span>
+  </div>
+</footer>
+
+<script>
+  document.querySelector('.menu-toggle')?.addEventListener('click', () => {
+    const ul = document.querySelector('nav ul');
+    ul.style.display = ul.style.display === 'flex' ? 'none' : 'flex';
+    ul.style.flexDirection = 'column';
+    ul.style.position = 'absolute';
+    ul.style.top = '70px';
+    ul.style.right = '24px';
+    ul.style.background = 'var(--paper)';
+    ul.style.padding = '20px';
+    ul.style.borderRadius = '4px';
+    ul.style.boxShadow = '0 12px 32px -12px rgba(0,0,0,0.2)';
+  });
+</script>
+
+</body>
+</html>
