@@ -1,0 +1,650 @@
+<title>Privacy Policy — AlphaGator Logistics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<style>
+  /* ── Tokens ── */
+  :root {
+    --bg:          #f5f7fa;
+    --bg-card:     #ffffff;
+    --bg-toc:      #edf0f6;
+    --border:      #dde2ed;
+    --rule:        #c8a96e;
+    --navy:        #08124a;
+    --navy-mid:    #0f2070;
+    --accent:      #1559a0;
+    --accent-hover:#0e4282;
+    --text:        #1a1f36;
+    --text-soft:   #4a5068;
+    --text-muted:  #717899;
+    --label-bg:    #e8ecf7;
+    --label-text:  #08124a;
+    --mono-bg:     #f0f2f8;
+    --shadow:      0 1px 4px rgba(8,18,74,.08), 0 4px 16px rgba(8,18,74,.06);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg:        #0b1020;
+      --bg-card:   #111827;
+      --bg-toc:    #0e1630;
+      --border:    #1e2a48;
+      --rule:      #b8943a;
+      --navy:      #c5d4ff;
+      --navy-mid:  #8fa8e8;
+      --accent:    #6b9fe8;
+      --accent-hover:#89b5f0;
+      --text:      #e8eaf6;
+      --text-soft: #a0aac8;
+      --text-muted:#6b7499;
+      --label-bg:  #1a2544;
+      --label-text:#c5d4ff;
+      --mono-bg:   #141d36;
+      --shadow:    0 1px 4px rgba(0,0,0,.3), 0 4px 16px rgba(0,0,0,.2);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bg:        #0b1020;
+    --bg-card:   #111827;
+    --bg-toc:    #0e1630;
+    --border:    #1e2a48;
+    --rule:      #b8943a;
+    --navy:      #c5d4ff;
+    --navy-mid:  #8fa8e8;
+    --accent:    #6b9fe8;
+    --accent-hover:#89b5f0;
+    --text:      #e8eaf6;
+    --text-soft: #a0aac8;
+    --text-muted:#6b7499;
+    --label-bg:  #1a2544;
+    --label-text:#c5d4ff;
+    --mono-bg:   #141d36;
+    --shadow:    0 1px 4px rgba(0,0,0,.3), 0 4px 16px rgba(0,0,0,.2);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 0;
+    padding-inline: 20px;
+    padding-block: 40px;
+  }
+
+  /* ── Page wrapper ── */
+  .page-wrap {
+    max-width: 1060px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  @media (min-width: 860px) {
+    .page-wrap {
+      grid-template-columns: 220px 1fr;
+      gap: 0 48px;
+      align-items: start;
+    }
+  }
+
+  /* ── Header ── */
+  .doc-header {
+    grid-column: 1 / -1;
+    border-bottom: 3px solid var(--rule);
+    padding-bottom: 32px;
+    margin-bottom: 40px;
+  }
+
+  .brand-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+
+  .brand-mark {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+  }
+
+  .brand-name {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: var(--navy);
+    letter-spacing: -.01em;
+  }
+
+  .brand-sub {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .68rem;
+    color: var(--text-muted);
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+
+  .doc-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .72rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--rule);
+    margin-bottom: 10px;
+  }
+
+  .doc-title {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.9rem, 4vw, 2.6rem);
+    color: var(--navy);
+    line-height: 1.15;
+    text-wrap: balance;
+    margin: 0 0 16px;
+  }
+
+  .doc-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    font-size: .83rem;
+    color: var(--text-muted);
+  }
+
+  .doc-meta span {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  /* ── TOC Sidebar ── */
+  .toc {
+    background: var(--bg-toc);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px;
+    position: sticky;
+    top: 24px;
+    font-size: .83rem;
+    margin-bottom: 32px;
+  }
+
+  .toc-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .68rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+  }
+
+  .toc ol {
+    margin: 0;
+    padding-left: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .toc li { line-height: 1.35; }
+
+  .toc a {
+    color: var(--text-soft);
+    text-decoration: none;
+    transition: color .15s;
+  }
+
+  .toc a:hover { color: var(--accent); }
+
+  /* ── Main document ── */
+  .doc-body {
+    min-width: 0;
+  }
+
+  /* ── Sections ── */
+  .policy-section {
+    margin-bottom: 48px;
+    scroll-margin-top: 32px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    border-top: 1px solid var(--border);
+    padding-top: 28px;
+    margin-bottom: 18px;
+  }
+
+  .section-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .72rem;
+    font-weight: 500;
+    color: var(--rule);
+    letter-spacing: .08em;
+    flex-shrink: 0;
+    padding-top: 2px;
+  }
+
+  h2 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--navy);
+    margin: 0;
+    text-wrap: balance;
+    letter-spacing: -.01em;
+  }
+
+  h3 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--navy-mid);
+    margin: 24px 0 8px;
+    letter-spacing: -.01em;
+  }
+
+  p {
+    margin: 0 0 14px;
+    color: var(--text-soft);
+    max-width: 68ch;
+  }
+
+  p:last-child { margin-bottom: 0; }
+
+  ul, ol {
+    margin: 0 0 14px;
+    padding-left: 22px;
+    color: var(--text-soft);
+    max-width: 68ch;
+  }
+
+  li { margin-bottom: 6px; }
+  li:last-child { margin-bottom: 0; }
+
+  a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+    transition: color .15s;
+  }
+
+  a:hover { color: var(--accent-hover); }
+
+  /* ── Highlight box ── */
+  .highlight-box {
+    background: var(--label-bg);
+    border-left: 3px solid var(--rule);
+    border-radius: 0 6px 6px 0;
+    padding: 16px 20px;
+    margin-bottom: 20px;
+  }
+
+  .highlight-box p {
+    margin: 0;
+    font-size: .9rem;
+    color: var(--label-text);
+    font-weight: 500;
+    max-width: none;
+  }
+
+  /* ── Chip labels ── */
+  .chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    background: var(--label-bg);
+    color: var(--label-text);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .72rem;
+    font-weight: 500;
+    letter-spacing: .04em;
+    padding: 4px 10px;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+  }
+
+  /* ── Contact card ── */
+  .contact-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px 28px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .contact-row {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 8px;
+    font-size: .9rem;
+  }
+
+  .contact-key {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .72rem;
+    font-weight: 500;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    padding-top: 2px;
+  }
+
+  .contact-val {
+    color: var(--text-soft);
+  }
+
+  /* ── Effective date banner ── */
+  .eff-banner {
+    grid-column: 1 / -1;
+    background: var(--navy);
+    border-radius: 8px;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+  }
+
+  .eff-banner-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .72rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--rule);
+  }
+
+  .eff-banner-date {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #fff;
+  }
+
+  .eff-banner-note {
+    margin-left: auto;
+    font-size: .8rem;
+    color: rgba(255,255,255,.55);
+    font-style: italic;
+  }
+
+  @media (max-width: 859px) {
+    .eff-banner-note { margin-left: 0; }
+    .toc { display: none; }
+  }
+</style>
+
+<div class="page-wrap">
+
+  <!-- Header -->
+  <header class="doc-header">
+    <div class="brand-row">
+      <div class="brand-mark">
+        <span class="brand-name">AlphaGator Logistics</span>
+        <span class="brand-sub">Mundzberg Enterprises LLC</span>
+      </div>
+    </div>
+    <div class="doc-eyebrow">Legal · Privacy</div>
+    <h1 class="doc-title">Privacy Policy</h1>
+    <div class="doc-meta">
+      <span>Effective: September 16, 2026</span>
+      <span>·</span>
+      <span>alphagatorlogistics.com</span>
+    </div>
+  </header>
+
+  <!-- Effective date banner -->
+  <div class="eff-banner">
+    <span class="eff-banner-label">Effective date</span>
+    <span class="eff-banner-date">September 16, 2026</span>
+    <span class="eff-banner-note">Review this policy periodically — we'll post updates here.</span>
+  </div>
+
+  <!-- TOC -->
+  <nav class="toc" aria-label="Table of contents">
+    <div class="toc-label">Contents</div>
+    <ol>
+      <li><a href="#s1">Information We Collect</a></li>
+      <li><a href="#s2">How We Use Your Information</a></li>
+      <li><a href="#s3">Information Sharing</a></li>
+      <li><a href="#s4">Cookies & Tracking</a></li>
+      <li><a href="#s5">Data Retention</a></li>
+      <li><a href="#s6">Data Security</a></li>
+      <li><a href="#s7">Your Rights & Choices</a></li>
+      <li><a href="#s8">Children's Privacy</a></li>
+      <li><a href="#s9">International Data</a></li>
+      <li><a href="#s10">Changes to Policy</a></li>
+      <li><a href="#s11">Contact Us</a></li>
+    </ol>
+  </nav>
+
+  <!-- Body -->
+  <main class="doc-body">
+
+    <div class="highlight-box">
+      <p>This Privacy Policy explains how Mundzberg Enterprises LLC, doing business as AlphaGator Logistics ("AlphaGator," "we," "us," or "our"), collects, uses, and protects information you provide when visiting www.alphagatorlogistics.com or contacting us for freight brokerage services. Please read it carefully.</p>
+    </div>
+
+    <!-- 1 -->
+    <section class="policy-section" id="s1">
+      <div class="section-header">
+        <span class="section-num">01</span>
+        <h2>Information We Collect</h2>
+      </div>
+
+      <h3>Information You Provide Directly</h3>
+      <p>When you submit a quote request, contact form, or otherwise communicate with us, we may collect:</p>
+      <ul>
+        <li><strong>Contact details</strong> — name, company name, job title, phone number, and email address</li>
+        <li><strong>Shipment information</strong> — origin and destination, freight type, commodity, weight/dimensions, desired pickup dates, and special handling requirements</li>
+        <li><strong>Business information</strong> — billing address, payment terms, and any other details you voluntarily share about your shipping program</li>
+        <li><strong>Correspondence</strong> — the content of emails, phone messages, or other communications you send us</li>
+      </ul>
+
+      <h3>Information Collected Automatically</h3>
+      <p>When you visit our website, our servers and third-party services automatically record certain technical data, including:</p>
+      <ul>
+        <li>IP address and general geographic location (city/region level)</li>
+        <li>Browser type, operating system, and device type</li>
+        <li>Pages visited, time spent, and referring URL</li>
+        <li>Date and time of each request</li>
+      </ul>
+
+      <h3>Information from Third Parties</h3>
+      <p>We may receive information about you from load boards, carrier vetting databases, or publicly available business directories in the ordinary course of operating a licensed freight brokerage. We use this information solely for carrier qualification and operational purposes.</p>
+    </section>
+
+    <!-- 2 -->
+    <section class="policy-section" id="s2">
+      <div class="section-header">
+        <span class="section-num">02</span>
+        <h2>How We Use Your Information</h2>
+      </div>
+      <p>We use the information we collect to:</p>
+      <ul>
+        <li>Respond to quote requests and provide freight brokerage services</li>
+        <li>Arrange, coordinate, and track shipments on your behalf</li>
+        <li>Communicate order status, delivery updates, and invoicing</li>
+        <li>Establish and manage your account and payment terms</li>
+        <li>Comply with FMCSA regulations, DOT requirements, and applicable federal and state law</li>
+        <li>Improve the quality, safety, and performance of our services</li>
+        <li>Prevent fraud and protect the security of our systems</li>
+        <li>Send service-related announcements (we do not send unsolicited marketing email)</li>
+      </ul>
+      <p>We do not sell your personal information and do not use it for automated profiling or decision-making that produces legal or similarly significant effects.</p>
+    </section>
+
+    <!-- 3 -->
+    <section class="policy-section" id="s3">
+      <div class="section-header">
+        <span class="section-num">03</span>
+        <h2>Information Sharing &amp; Disclosure</h2>
+      </div>
+
+      <h3>Service Providers</h3>
+      <p>We share information with carriers, technology vendors, and other service providers who help us operate our brokerage — for example, transportation management systems, email delivery services, and accounting software. These parties are contractually obligated to use your information only to perform services on our behalf.</p>
+
+      <h3>Carrier Partners</h3>
+      <p>To arrange freight transportation, we must share relevant shipment details (pickup/delivery addresses, commodity, and contact information) with the motor carriers we engage to move your freight. This sharing is inherent to the freight brokerage service and necessary to execute your shipment.</p>
+
+      <h3>Legal Requirements</h3>
+      <p>We may disclose information when required by law, regulation, legal process, or government request, or when we believe disclosure is necessary to protect the rights, property, or safety of AlphaGator, our customers, or others.</p>
+
+      <h3>Business Transfers</h3>
+      <p>In the event of a merger, acquisition, or sale of substantially all of our assets, your information may be transferred as part of that transaction. We will provide notice before your information is transferred and becomes subject to a different privacy policy.</p>
+
+      <p>We do not share, sell, rent, or trade your personal information with third parties for their own promotional purposes.</p>
+    </section>
+
+    <!-- 4 -->
+    <section class="policy-section" id="s4">
+      <div class="section-header">
+        <span class="section-num">04</span>
+        <h2>Cookies &amp; Tracking Technologies</h2>
+      </div>
+      <p>Our website may use cookies and similar technologies to improve functionality and understand how visitors use the site. These may include:</p>
+      <div class="chip-row">
+        <span class="chip">Essential Cookies</span>
+        <span class="chip">Analytics Cookies</span>
+        <span class="chip">Preference Cookies</span>
+      </div>
+      <ul>
+        <li><strong>Essential cookies</strong> are required for the website to function (e.g., form session state). They cannot be disabled.</li>
+        <li><strong>Analytics cookies</strong> help us understand traffic patterns and page performance (e.g., Google Analytics). The data is aggregated and not linked to individual identities.</li>
+        <li><strong>Preference cookies</strong> remember settings like your preferred language or region.</li>
+      </ul>
+      <p>You can control or disable non-essential cookies through your browser settings. Note that disabling cookies may affect certain website features. We honor Do Not Track signals to the extent practicable.</p>
+    </section>
+
+    <!-- 5 -->
+    <section class="policy-section" id="s5">
+      <div class="section-header">
+        <span class="section-num">05</span>
+        <h2>Data Retention</h2>
+      </div>
+      <p>We retain personal information for as long as necessary to fulfill the purposes described in this Policy, including to satisfy legal, accounting, and reporting requirements. Specifically:</p>
+      <ul>
+        <li><strong>Customer and shipment records</strong> are retained for a minimum of seven (7) years in accordance with FMCSA broker recordkeeping requirements and applicable tax law.</li>
+        <li><strong>Quote requests that do not convert to shipments</strong> are retained for up to two (2) years for business development purposes, then deleted.</li>
+        <li><strong>Website analytics data</strong> is typically retained in aggregated form and not linked to individual users after 26 months.</li>
+      </ul>
+      <p>When information is no longer required, we delete or anonymize it in a manner designed to prevent reconstruction of the original data.</p>
+    </section>
+
+    <!-- 6 -->
+    <section class="policy-section" id="s6">
+      <div class="section-header">
+        <span class="section-num">06</span>
+        <h2>Data Security</h2>
+      </div>
+      <p>We implement reasonable and appropriate technical and organizational measures to protect your information against unauthorized access, alteration, disclosure, or destruction. These measures include encrypted communications (TLS/HTTPS), access controls, and regular review of our data handling practices.</p>
+      <p>No method of transmission over the internet or electronic storage is 100% secure. While we strive to protect your information, we cannot guarantee its absolute security. If you have reason to believe that your interaction with us is no longer secure, please contact us immediately at <a href="mailto:team@alphagatorlogistics.com">team@alphagatorlogistics.com</a>.</p>
+    </section>
+
+    <!-- 7 -->
+    <section class="policy-section" id="s7">
+      <div class="section-header">
+        <span class="section-num">07</span>
+        <h2>Your Rights &amp; Choices</h2>
+      </div>
+      <p>Depending on your location and applicable law, you may have the right to:</p>
+      <ul>
+        <li><strong>Access</strong> — request a copy of the personal information we hold about you</li>
+        <li><strong>Correction</strong> — request that we correct inaccurate or incomplete information</li>
+        <li><strong>Deletion</strong> — request that we delete your personal information, subject to our legal retention obligations</li>
+        <li><strong>Opt out of marketing communications</strong> — unsubscribe from any promotional emails using the link in the email footer or by contacting us directly</li>
+        <li><strong>Data portability</strong> — receive your information in a commonly used, machine-readable format</li>
+      </ul>
+      <p>Residents of California may have additional rights under the California Consumer Privacy Act (CCPA), including the right to know what personal information has been collected and the right to opt out of sale (we do not sell personal information). Residents of Virginia, Colorado, and other states with comprehensive privacy laws may also have applicable rights.</p>
+      <p>To exercise any of these rights, please contact us at the information in Section 11. We will respond within 45 days or the timeframe required by applicable law. We will not discriminate against you for exercising your privacy rights.</p>
+    </section>
+
+    <!-- 8 -->
+    <section class="policy-section" id="s8">
+      <div class="section-header">
+        <span class="section-num">08</span>
+        <h2>Children's Privacy</h2>
+      </div>
+      <p>Our website and services are intended exclusively for businesses and business professionals. We do not knowingly collect personal information from anyone under the age of 18. If we become aware that we have inadvertently collected information from a minor, we will delete it promptly. If you believe a minor has provided us with personal information, please contact us immediately.</p>
+    </section>
+
+    <!-- 9 -->
+    <section class="policy-section" id="s9">
+      <div class="section-header">
+        <span class="section-num">09</span>
+        <h2>International Data Transfers</h2>
+      </div>
+      <p>AlphaGator operates with a freight operations team based in Bosnia and Herzegovina. As a result, personal information you provide may be accessed by and transferred to team members located outside the United States. We take steps to ensure that such transfers are made in compliance with applicable law and that international team members are subject to confidentiality obligations and data handling requirements consistent with this Policy.</p>
+      <p>By using our website or submitting information to us, you acknowledge that your information may be processed in Bosnia and Herzegovina or other countries where our service providers operate, which may have different data protection laws than those in your home jurisdiction.</p>
+    </section>
+
+    <!-- 10 -->
+    <section class="policy-section" id="s10">
+      <div class="section-header">
+        <span class="section-num">10</span>
+        <h2>Changes to This Policy</h2>
+      </div>
+      <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors. When we make material changes, we will post the updated Policy on this page with a revised effective date. For significant changes, we may provide additional notice, such as a banner on our website or an email to customers on file.</p>
+      <p>Your continued use of our website or services after the effective date of any change constitutes your acceptance of the revised Policy. We encourage you to review this page periodically.</p>
+    </section>
+
+    <!-- 11 -->
+    <section class="policy-section" id="s11">
+      <div class="section-header">
+        <span class="section-num">11</span>
+        <h2>Contact Us</h2>
+      </div>
+      <p>If you have questions, concerns, or requests regarding this Privacy Policy or our data practices, please reach out:</p>
+
+      <div class="contact-card">
+        <div class="contact-row">
+          <span class="contact-key">Company</span>
+          <span class="contact-val">Mundzberg Enterprises LLC<br>d/b/a AlphaGator Logistics</span>
+        </div>
+        <div class="contact-row">
+          <span class="contact-key">Email</span>
+          <span class="contact-val"><a href="mailto:team@alphagatorlogistics.com">team@alphagatorlogistics.com</a></span>
+        </div>
+        <div class="contact-row">
+          <span class="contact-key">Phone</span>
+          <span class="contact-val"><a href="tel:+13018350001">301-835-0001</a></span>
+        </div>
+        <div class="contact-row">
+          <span class="contact-key">Address</span>
+          <span class="contact-val">Odenton, Maryland</span>
+        </div>
+        <div class="contact-row">
+          <span class="contact-key">Hours</span>
+          <span class="contact-val">Mon – Fri · 8:00 AM – 6:00 PM ET</span>
+        </div>
+        <div class="contact-row">
+          <span class="contact-key">Authority</span>
+          <span class="contact-val">MC# 1819235 · USDOT# 4572948</span>
+        </div>
+      </div>
+
+      <p style="margin-top: 20px; font-size: .82rem; color: var(--text-muted);">
+        This Privacy Policy was last updated September 16, 2026. AlphaGator Logistics is a registered trade name of Mundzberg Enterprises LLC, a Maryland limited liability company licensed as a property broker by the FMCSA. This policy does not constitute legal advice; consult qualified legal counsel for questions specific to your situation.
+      </p>
+    </section>
+
+  </main>
+</div>
